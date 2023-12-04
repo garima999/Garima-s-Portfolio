@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <!-- garima change the logo -->
+     <img src="logo6.png" class=" logo" alt=""/>
+        <ul>
+           
+            <li><a href="/">Home</a></li>
+            <li><a href="/About.html">About</a></li>
+            <li><a href="/projects.html">My Projects</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- About section   -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about_col_1">
+                    <!-- garima change this user image also -->
+                    <img src="abt4.jpg">
+                </div>
+                <div class="about_col_2">
+                    <h1 class="sub_title">About Me</h1>
+                    <p>Hello i'm Garima.I'm Pursuing My B.Tec from St.willfred's Institute of Engineering & Technology</p>
+                    <div class="tab_titles">
+                        <p class="tab_links active_link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab_links" onclick="opentab('experience')">Training/Internship</p>
+                        <p class="tab_links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab_contents active_tab" id="skills">
+                        <!-- <br/>Designing Web Interfaces -->
+                        <ul>
+                            <li>
+                                <span>HTML</span>
+                            </li>
+                            <li><span>CSS</span></li>
+                            <li><span>Java  Script</span></li>
+                            <li><span>Java</span></li>
+                            <li><span>React Js</span></li>
+                            <li><span>Express Js</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab_contents" id="experience">
+                        <!-- <br/>Designing Web Interfaces -->
+                        <ul>
+                            <li>
+                                <span>Traning in Core java(july 2022)</span><br/>Linux World (Jaipur)
+                            </li>
+                            <li><span>Certifications</span><br/>Frontend Web Development(june 2023)</li>
+                            <li><span>React Js</span><br/>(June 2023)</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab_contents" id="education">
+                        <!-- <br/>Designing Web Interfaces -->
+                        <ul>
+                            <li>
+                                <span>2018 (10th)</span><br/>R.B.S.E board(72.67%)
+                            </li>
+                            <li><span>2020 (12th)</span><br/>R.B.S.E board(62%)</li>
+                            <li><span>B.tec</span><br/>2020-2024</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+var tablinks=document.getElementsByClassName('tab_links')
+var tabcontents=document.getElementsByClassName('tab_contents')
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active_link")
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active_tab")
+    }
+    event.currentTarget.classList.add("active_link")
+    document.getElementById(tabname).classList.add("active_tab");
+
+}
+    </script>
+</body>
+ </html> 
